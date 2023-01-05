@@ -1,0 +1,27 @@
+{
+    "name": "Lazy",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+            "matches": ["https://*.grepolis.com/game/*"],
+            "js": ["js//do_stuff.js"]
+        }
+    ],
+    "action":{
+        "default_popup": "html&css//settings.html",
+        "default_title": "Lazy"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "host_permissions": [
+        "https://*.grepolis.com/game/*"
+    ],
+    "icons": {
+    },
+    "web_accessible_resources": [{
+        "resources": ["js//inject.js"],
+        "matches": ["<all_urls>"]
+    }]
+}
